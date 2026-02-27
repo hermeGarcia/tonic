@@ -108,7 +108,7 @@ pub fn compile_fds(fds: prost_types::FileDescriptorSet) -> io::Result<()> {
 }
 
 /// Non-path Rust types allowed for request/response types.
-const NON_PATH_TYPE_ALLOWLIST: &[&str] = &["()"];
+const NON_PATH_TYPE_ALLOWLIST: &[&str] = &["()", "bool", "i32", "i64", "u32", "u64", "f32", "f64"];
 
 /// Newtype wrapper for prost to add tonic-specific extensions
 struct TonicBuildService {
